@@ -1,0 +1,23 @@
+<h1>Hello {{name}}</h1>
+
+// [] means property binding - C to D
+<br> // () means event binding - D to C
+
+<h2 [style.color]="nameColor">{{name}}</h2>
+<button (click)="changeColor()">change color</button>
+
+<h4>inline &#x3C;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&#x3D;&#x22;&#x74;&#x65;&#x78;&#x74;&#x22;&#x20;&#x5B;&#x76;&#x61;&#x6C;&#x75;&#x65;&#x5D;&#x3D;&#x22;&#x6E;&#x61;&#x6D;&#x65;&#x22;&#x20;&#x28;&#x6B;&#x65;&#x79;&#x75;&#x70;&#x2E;&#x65;&#x6E;&#x74;&#x65;&#x72;&#x29;&#x3D;&#x22;&#x6E;&#x61;&#x6D;&#x65;&#x20;&#x3D;&#x20;&#x24;&#x65;&#x76;&#x65;&#x6E;&#x74;&#x2E;&#x74;&#x61;&#x72;&#x67;&#x65;&#x74;&#x2E;&#x76;&#x61;&#x6C;&#x75;&#x65;&#x22;&#x3E;</h4>
+<input type="text" [value]="name" (keyup.enter)="name = $event.target.value">
+<br />
+<h4>the way to go is with [(ngModel)]=&#x22;name&#x22; &#x62;&#x75;&#x74;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x74;&#x68;&#x69;&#x73;&#x20;&#x77;&#x65;&#x20;&#x6E;&#x65;&#x65;&#x64;&#x20;&#x74;&#x6F;&#x20;&#x68;&#x61;&#x76;&#x65;&#x20;&#x69;&#x6E;&#x20;&#x61;&#x70;&#x70;&#x2E;&#x6D;&#x6F;&#x64;&#x75;&#x6C;&#x65;&#x2E;&#x74;&#x73;&#x20;&#x3A;&#x20;&#x20;&#x69;&#x6D;&#x70;&#x6F;&#x72;&#x74;&#x20;&#x7B;&#x20;&#x46;&#x6F;&#x72;&#x6D;&#x73;&#x4D;&#x6F;&#x64;&#x75;&#x6C;&#x65;&#x20;&#x7D;&#x20;&#x20;&#x20;&#x66;&#x72;&#x6F;&#x6D;&#x20;&#x27;&#x40;&#x61;&#x6E;&#x67;&#x75;&#x6C;&#x61;&#x72;&#x2F;&#x66;&#x6F;&#x72;&#x6D;&#x73;&#x27;&#x3B;&#x20;&#xA;&#x20;&#x20;&#x20;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x40;&#x4E;&#x67;&#x4D;&#x6F;&#x64;&#x75;&#x6C;&#x65;&#x28;&#x7B;&#x69;&#x6D;&#x70;&#x6F;&#x72;&#x74;&#x73;&#x3A;&#x20;&#x5B;&#x20;&#x42;&#x72;&#x6F;&#x77;&#x73;&#x65;&#x72;&#x4D;&#x6F;&#x64;&#x75;&#x6C;&#x65;&#x2C;&#x46;&#x6F;&#x72;&#x6D;&#x73;&#x4D;&#x6F;&#x64;&#x75;&#x6C;&#x65;&#x20;&#x5D;&#x2C;&#x20;&#x64;&#x65;&#x63;&#x6C;&#x61;&#x72;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x3A;&#x20;&#x5B;&#x20;&#x41;&#x70;&#x70;&#x43;&#x6F;&#x6D;&#x70;&#x6F;&#x6E;&#x65;&#x6E;&#x74;&#x20;&#x5D;&#x2C;&#x20;&#x62;&#x6F;&#x6F;&#x74;&#x73;&#x74;&#x72;&#x61;&#x70;&#x3A;&#x5B;&#x20;&#x41;&#x70;&#x70;&#x43;&#x6F;&#x6D;&#x70;&#x6F;&#x6E;&#x65;&#x6E;&#x74;&#x20;&#x5D;&#x7D;&#x29;
+</h4>
+<input type="text" [(ngModel)]="name">
+
+
+<ul>
+    <li *ngFor="let customer of customers">
+        <span [style.color]="nameColor">{{customer.id}}</span>
+        <span>{{customer.name}}</span>
+
+    </li>
+</ul>

@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+
+@Component({
+  selector: 'my-app',
+  templateUrl: "app/app.component.html",
+})
+export class AppComponent {
+  name = 'Angular';
+  nameColor = "red";
+
+  changeColor() { 
+    this.nameColor = (this.nameColor === "red")? "blue" : "red";
+  }
+
+
+  customers = [
+    { id: 1, name: "Aleksandar" },
+    { id: 2, name: "Goran" },
+    { id: 3, name: "Daniel" },
+    { id: 4, name: "Ivan" },
+  ];
+}
