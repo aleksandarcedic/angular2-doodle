@@ -15,9 +15,9 @@ export class AppComponent {
 
 
   customers = [
-    { id: 1, name: "Aleksandar" },
-    { id: 2, name: "Goran" },
-    { id: 3, name: "Daniel" },
-    { id: 4, name: "Ivan" },
+    { id: 1, name: "John" },
+    { id: 2, name: "Ward" },
+    { id: 3, name: "Bill" },
+    { id: 4, name: "Elon" },
   ];
 }
